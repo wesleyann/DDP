@@ -1,0 +1,21 @@
+---
+title: "Leaflet_Assignment"
+author: "EA"
+date: 'June 15, 2022'
+output: html_document
+---
+
+
+
+```{r, echo = FALSE}
+library(leaflet)
+
+df <- data.frame(lat = runif(20, min = 29.71, max = 30.1), 
+                             lng = runif(20, min = -95.4, max = -95.1))
+
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers()
+```
+
